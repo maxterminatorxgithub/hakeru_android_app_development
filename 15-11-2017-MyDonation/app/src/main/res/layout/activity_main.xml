@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="thegreatest.shahar.com.mydonation.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relLayoutInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/activity_main_title"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txtSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitle"
+            android:text="Please Give Me Money..."
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/rgMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/txtSubtitle">
+
+            <RadioButton
+                android:id="@+id/rbPaypal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Paypal" />
+
+            <RadioButton
+                android:id="@+id/rbBitcoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bitcoin" />
+
+        </RadioGroup>
+
+        <NumberPicker
+            android:id="@+id/npAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/txtTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/rgMethod" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnDonate" />
+
+        <Button
+            android:id="@+id/btnDonate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Donate" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayoutImage"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgThankYou"
+            android:src="@drawable/thank_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

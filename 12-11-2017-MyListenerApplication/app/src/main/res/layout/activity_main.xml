@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="thegreatest.shahar.com.myactivitylifecycle.MainActivity">
+
+    <Button
+        android:id="@+id/btnPushMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="139dp"
+        android:text="Push Me" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:text="Name:"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="66dp"
+        android:text="Password"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnPushMe"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtPass"
+        android:layout_alignTop="@+id/textView"
+        android:ems="10"
+        android:hint="Enter Your Name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPushMe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104dp"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/btnBravo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Bravo"
+        android:layout_alignBaseline="@+id/btnPushMe"
+        android:layout_alignBottom="@+id/btnPushMe"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtPass"
+        android:layout_alignTop="@+id/btnPushMe"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnBravo"
+        android:layout_below="@+id/btnBravo"
+        android:layout_marginTop="16dp"
+        android:text="Check"
+        android:enabled="false"/>
+</RelativeLayout>
